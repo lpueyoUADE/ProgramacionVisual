@@ -32,9 +32,10 @@ Shader "4_ParallaxOcclusion"
 		struct Input
 		{
 			float2 uv_texcoord;
-			float3 worldPos;
-			float3 worldNormal;
+			float3 viewDir;
 			INTERNAL_DATA
+			float3 worldNormal;
+			float3 worldPos;
 		};
 
 		uniform sampler2D _Normals;
@@ -113,10 +114,10 @@ Shader "4_ParallaxOcclusion"
 
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
+			float3 ase_worldNormal = WorldNormalVector( i, float3( 0, 0, 1 ) );
 			float3 ase_worldPos = i.worldPos;
 			float3 ase_worldViewDir = normalize( UnityWorldSpaceViewDir( ase_worldPos ) );
-			float3 ase_worldNormal = WorldNormalVector( i, float3( 0, 0, 1 ) );
-			float2 OffsetPOM1 = POM( _Texture0, i.uv_texcoord, ddx(i.uv_texcoord), ddy(i.uv_texcoord), ase_worldNormal, ase_worldViewDir, ase_worldViewDir, 8, 8, _Scale, _RefPlane, _Texture0_ST.xy, float2(0,0), 0 );
+			float2 OffsetPOM1 = POM( _Texture0, i.uv_texcoord, ddx(i.uv_texcoord), ddy(i.uv_texcoord), ase_worldNormal, ase_worldViewDir, i.viewDir, 8, 8, _Scale, _RefPlane, _Texture0_ST.xy, float2(0,0), 0 );
 			o.Normal = UnpackNormal( tex2D( _Normals, OffsetPOM1 ) );
 			o.Albedo = ( _Tint * tex2D( _Texture0, OffsetPOM1 ) ).rgb;
 			o.Alpha = 1;
@@ -189,6 +190,7 @@ Shader "4_ParallaxOcclusion"
 				surfIN.uv_texcoord = IN.customPack1.xy;
 				float3 worldPos = float3( IN.tSpace0.w, IN.tSpace1.w, IN.tSpace2.w );
 				half3 worldViewDir = normalize( UnityWorldSpaceViewDir( worldPos ) );
+				surfIN.viewDir = IN.tSpace0.xyz * worldViewDir.x + IN.tSpace1.xyz * worldViewDir.y + IN.tSpace2.xyz * worldViewDir.z;
 				surfIN.worldPos = worldPos;
 				surfIN.worldNormal = float3( IN.tSpace0.z, IN.tSpace1.z, IN.tSpace2.z );
 				surfIN.internalSurfaceTtoW0 = IN.tSpace0.xyz;
@@ -210,12 +212,12 @@ Shader "4_ParallaxOcclusion"
 }
 /*ASEBEGIN
 Version=18900
-0;587;1223;404;1280.217;-79.01015;1.3;True;False
-Node;AmplifyShaderEditor.ViewDirInputsCoordNode;6;-750.5767,263.3266;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+0;499;1465;492;1440.782;113.3156;1;True;True
 Node;AmplifyShaderEditor.TexturePropertyNode;4;-974.9164,59.18423;Inherit;True;Property;_Texture0;Texture 0;0;0;Create;True;0;0;0;False;0;False;b36f9ecf6265aca4187761f86a4d5c75;b36f9ecf6265aca4187761f86a4d5c75;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
-Node;AmplifyShaderEditor.TextureCoordinatesNode;2;-737.9772,-46.41153;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;7;-848.2775,421.6193;Inherit;False;Property;_RefPlane;RefPlane;3;0;Create;True;0;0;0;False;0;False;0.5;0.5;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;5;-724.2272,168.781;Inherit;False;Property;_Scale;Scale;2;0;Create;True;0;0;0;False;0;False;0;0.01;0;0.1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.TextureCoordinatesNode;2;-737.9772,-46.41153;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ViewDirInputsCoordNode;6;-750.5767,263.3266;Inherit;False;Tangent;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.ParallaxOcclusionMappingNode;1;-450.4383,122.135;Inherit;False;0;8;False;-1;16;False;-1;2;0.02;0;False;1,1;False;0,0;8;0;FLOAT2;0,0;False;1;SAMPLER2D;;False;7;SAMPLERSTATE;;False;2;FLOAT;0.02;False;3;FLOAT3;0,0,0;False;4;FLOAT;0;False;5;FLOAT2;0,0;False;6;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.SamplerNode;9;-147.408,-19.13121;Inherit;True;Property;_MainTexture;Main Texture;2;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ColorNode;11;-73.80738,-223.9312;Inherit;False;Property;_Tint;Tint;4;0;Create;True;0;0;0;False;0;False;1,1,1,0;1,1,1,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -235,4 +237,4 @@ WireConnection;8;1;1;0
 WireConnection;0;0;10;0
 WireConnection;0;1;8;0
 ASEEND*/
-//CHKSM=53C6EAA583DD59BC2C78A3313D9D80B744FA4C6B
+//CHKSM=0352B7AA48963487554D7F323BBB43247F243FA8

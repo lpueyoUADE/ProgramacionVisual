@@ -615,6 +615,14 @@ PrefabInstance:
       propertyPath: targetShaderController
       value: 
       objectReference: {fileID: 2003010214}
+    - target: {fileID: 4314913109837573469, guid: 4a8d67dd6b8a7b84aad6371681b40068, type: 3}
+      propertyPath: targetShaderControllers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314913109837573469, guid: 4a8d67dd6b8a7b84aad6371681b40068, type: 3}
+      propertyPath: 'targetShaderControllers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2003010214}
     - target: {fileID: 4990537098150665114, guid: 4a8d67dd6b8a7b84aad6371681b40068, type: 3}
       propertyPath: m_text
       value: 6 - Toon shading

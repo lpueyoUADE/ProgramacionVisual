@@ -193,7 +193,7 @@ Shader "ToonShading"
 }
 /*ASEBEGIN
 Version=18900
-0;544;1577;447;4383.541;980.7562;5.187678;True;False
+0;439;1574;552;4016.333;695.3025;4.13014;True;False
 Node;AmplifyShaderEditor.SamplerNode;42;-1304.205,895.5021;Inherit;True;Property;_Normales;Normales;1;0;Create;True;0;0;0;False;0;False;-1;302951faffe230848aa0d3df7bb70faa;302951faffe230848aa0d3df7bb70faa;True;0;True;bump;Auto;True;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.WorldNormalVector;2;-915.916,918.5558;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;1;-940.679,736.9552;Inherit;False;False;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
@@ -247,4 +247,4 @@ WireConnection;48;0;41;0
 WireConnection;48;1;46;0
 WireConnection;0;13;48;0
 ASEEND*/
-//CHKSM=0C9F4B26C9025DE09D3280A1194842FE70E6E534
+//CHKSM=1F5EB7D8F085849167AB19E1C8FE470E54FDBB5D

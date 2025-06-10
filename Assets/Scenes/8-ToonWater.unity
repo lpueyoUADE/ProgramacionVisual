@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 790612744}
   - component: {fileID: 790612748}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Pelotita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -661,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 38a17d294e2a37c428bddd9b006b8943, type: 3}
       propertyPath: m_Name
-      value: icon
+      value: EVA01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -988,6 +988,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4314913109837573469, guid: 4a8d67dd6b8a7b84aad6371681b40068, type: 3}
       propertyPath: targetShaderController
+      value: 
+      objectReference: {fileID: 176810540}
+    - target: {fileID: 4314913109837573469, guid: 4a8d67dd6b8a7b84aad6371681b40068, type: 3}
+      propertyPath: targetShaderControllers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314913109837573469, guid: 4a8d67dd6b8a7b84aad6371681b40068, type: 3}
+      propertyPath: 'targetShaderControllers.Array.data[0]'
       value: 
       objectReference: {fileID: 176810540}
     - target: {fileID: 4990537098150665114, guid: 4a8d67dd6b8a7b84aad6371681b40068, type: 3}

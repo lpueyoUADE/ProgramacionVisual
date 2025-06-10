@@ -75,16 +75,16 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DarkLights: 0.3274932
+    - _DarkLights: 0.327
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HighLights: 0.6543729
+    - _HighLights: 0.654
     - _HightLights: 0.6543729
     - _Metallic: 0
-    - _MiddleLights: 0.4705321
+    - _MiddleLights: 0.471
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -98,7 +98,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DarkLightsColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HighLightsColor: {r: 0.7819968, g: 1, b: 0.7783019, a: 0}
+    - _HighLightsColor: {r: 0.78039217, g: 1, b: 0.7764706, a: 1}
     - _HighlightsColor: {r: 0.7819968, g: 1, b: 0.7783019, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

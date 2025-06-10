@@ -5,7 +5,7 @@ Shader "9_Disolve"
 	Properties
 	{
 		_Outline("Outline", Range( 0.01 , 0.3)) = 0.1598891
-		_NoiseScale("NoiseScale", Range( 0 , 5)) = 1
+		_NoiseScale("NoiseScale", Range( 0 , 5)) = 1.352941
 		_DissolveAmount("DissolveAmount", Range( 0 , 1)) = 0
 		_TextureSample0("Texture Sample 0", 2D) = "white" {}
 		_TextureSample1("Texture Sample 1", 2D) = "bump" {}
@@ -195,9 +195,9 @@ Shader "9_Disolve"
 }
 /*ASEBEGIN
 Version=18900
-0;585;1515;406;3512.642;325.1136;4.453462;True;False
+0;603;1672;388;1063.565;-598.3801;1;True;True
 Node;AmplifyShaderEditor.CommentaryNode;37;-1066.063,274.2833;Inherit;False;1321.694;573.6373;Comment;8;16;23;17;19;20;21;24;22;Dissolve Effect;1,1,1,1;0;0
-Node;AmplifyShaderEditor.RangedFloatNode;23;-1016.063,498.0855;Inherit;False;Property;_NoiseScale;NoiseScale;1;0;Create;True;0;0;0;False;0;False;1;2;0;5;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;23;-1016.063,498.0855;Inherit;False;Property;_NoiseScale;NoiseScale;1;0;Create;True;0;0;0;False;0;False;1.352941;2;0;5;0;1;FLOAT;0
 Node;AmplifyShaderEditor.PosVertexDataNode;16;-931.3097,328.1867;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;19;-723.0681,732.7607;Inherit;False;Property;_DissolveAmount;DissolveAmount;2;0;Create;True;0;0;0;False;0;False;0;0.7143222;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.NoiseGeneratorNode;17;-687.1836,324.2833;Inherit;True;Simplex3D;True;False;2;0;FLOAT3;0,0,0;False;1;FLOAT;1;False;1;FLOAT;0
@@ -238,4 +238,4 @@ WireConnection;0;1;34;0
 WireConnection;0;2;32;0
 WireConnection;0;9;22;0
 ASEEND*/
-//CHKSM=1F8D690DA341A5604F78C23AF14140E52F1EE3E3
+//CHKSM=B39A7042AC02E0376DB5AC92B1719856FB070034
