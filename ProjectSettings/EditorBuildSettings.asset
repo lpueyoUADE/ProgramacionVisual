@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Grupo 15/01-Ripple/01-Ripple.unity
     guid: fb170d71c897ea445abe20f649a9798a
   - enabled: 1
-    path: Assets/Grupo 15/02-Post_processiong/02-Post_Processing.unity
+    path: Assets/Grupo 15/02-Post_processing/02-Post_Processing.unity
     guid: 2527658182c697a4b91a1b6367a4ccaf
   - enabled: 1
     path: Assets/Grupo 15/03-UI/03-UI.unity
