@@ -6,20 +6,19 @@ using UnityEngine.UI;
 
 public class UIProperty : MonoBehaviour
 {
-    [SerializeField]
-    TextMeshProUGUI displayName;
+    [SerializeField] TextMeshProUGUI displayName;
 
     [Header("Slider")]
-
     [SerializeField] Slider slider;
-    [SerializeField]
-    TextMeshProUGUI minSliderValue;
+    [SerializeField] TextMeshProUGUI minSliderValue;
 
-    [SerializeField]
-    TextMeshProUGUI maxSliderValue;
+    [SerializeField] TextMeshProUGUI maxSliderValue;
     
-    [SerializeField]
-    TextMeshProUGUI currentSliderValue;
+    [SerializeField] TextMeshProUGUI currentSliderValue;
+
+    [Header("Background Colors")]
+    [SerializeField] Color floatColor;
+    [SerializeField] Color wholeNumbersColor;
 
     public ShaderProperty shaderProperty;
     public AmplifyShaderController targetShaderController;
@@ -33,6 +32,8 @@ public class UIProperty : MonoBehaviour
         slider.maxValue = shaderProperty.maxValue;
         slider.value = shaderProperty.defaultValue;
         slider.wholeNumbers = shaderProperty.wholeNumbers;
+
+        GetComponent<Image>().color = slider.wholeNumbers ? wholeNumbersColor: floatColor;
 
         slider.onValueChanged.AddListener(UpdateTargetProperty);
 

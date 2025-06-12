@@ -95,12 +95,15 @@ MonoBehaviour:
   minSliderValue: {fileID: 6280858988329002355}
   maxSliderValue: {fileID: 6569454970325501697}
   currentSliderValue: {fileID: 1177292097481519158}
+  floatColor: {r: 0, g: 0, b: 0, a: 0.5882353}
+  wholeNumbersColor: {r: 0, g: 0.3207547, b: 0.3207547, a: 0.78431374}
   shaderProperty:
     propertyName: 
     displayName: 
     minValue: 0
     maxValue: 0
     defaultValue: 0
+    wholeNumbers: 0
   targetShaderController: {fileID: 0}
 --- !u!1 &323178542660152079
 GameObject:
