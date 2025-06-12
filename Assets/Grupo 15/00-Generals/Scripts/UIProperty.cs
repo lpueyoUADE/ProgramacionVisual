@@ -32,6 +32,7 @@ public class UIProperty : MonoBehaviour
         slider.minValue = shaderProperty.minValue;
         slider.maxValue = shaderProperty.maxValue;
         slider.value = shaderProperty.defaultValue;
+        slider.wholeNumbers = shaderProperty.wholeNumbers;
 
         slider.onValueChanged.AddListener(UpdateTargetProperty);
 
