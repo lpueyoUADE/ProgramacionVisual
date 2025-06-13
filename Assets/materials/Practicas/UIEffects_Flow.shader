@@ -161,7 +161,7 @@ Shader "UIEffects_Flow"
 }
 /*ASEBEGIN
 Version=18900
-0;419;1574;572;3445.227;493.8099;2.974623;True;False
+0;605;1592;386;2070.387;436.5784;1.684692;True;False
 Node;AmplifyShaderEditor.CommentaryNode;1;-1242.309,378.9488;Inherit;False;672.7761;386.6579;Move direction;6;8;6;5;4;3;2;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.SimpleTimeNode;8;-1102.339,428.9488;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;5;-1192.309,546.0466;Inherit;False;Property;_Xtime;Xtime;8;0;Create;True;0;0;0;False;0;False;0.5;1;-1;1;0;1;FLOAT;0
@@ -186,4 +186,4 @@ WireConnection;11;33;7;0
 WireConnection;11;248;2;0
 WireConnection;0;0;11;0
 ASEEND*/
-//CHKSM=1D6E4485958DA7A5344CF41927A969C34F99D833
+//CHKSM=02EA53BC69F3AAEE436FAC063E0F3E84F7D15BD4

@@ -160,9 +160,9 @@ Shader "UIEffects"
 }
 /*ASEBEGIN
 Version=18900
-0;419;1574;572;2429.851;1346.29;2.449816;True;False
-Node;AmplifyShaderEditor.TexturePropertyNode;21;-105.0061,-705.6369;Inherit;True;Property;_Textura;Textura;10;0;Create;True;0;0;0;False;0;False;9fbef4b79ca3b784ba023cb1331520d5;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
-Node;AmplifyShaderEditor.SamplerNode;22;-173.7803,-916.2811;Inherit;True;Property;_Tinta;Tinta;7;0;Create;True;0;0;0;False;0;False;-1;f8d6e47f6ed31cd4eb05f940fccfdee6;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+0;605;1592;386;1826.083;939.2811;2.052128;True;False
+Node;AmplifyShaderEditor.TexturePropertyNode;21;-105.0061,-705.6369;Inherit;True;Property;_Textura;Textura;10;0;Create;True;0;0;0;False;0;False;9fbef4b79ca3b784ba023cb1331520d5;9fbef4b79ca3b784ba023cb1331520d5;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
+Node;AmplifyShaderEditor.SamplerNode;22;-173.7803,-916.2811;Inherit;True;Property;_Tinta;Tinta;7;0;Create;True;0;0;0;False;0;False;-1;f8d6e47f6ed31cd4eb05f940fccfdee6;f8d6e47f6ed31cd4eb05f940fccfdee6;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TexturePropertyNode;24;-113.8731,-503.1025;Inherit;True;Property;_Normals;Normals;8;0;Create;True;0;0;0;False;0;False;302951faffe230848aa0d3df7bb70faa;302951faffe230848aa0d3df7bb70faa;True;bump;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.RangedFloatNode;25;-168.1326,-279.3132;Half;False;Property;_DistortionAmount;DistortionAmount;9;0;Create;True;0;0;0;False;0;False;0;0.2002366;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.FunctionNode;20;173.1006,-781.4186;Inherit;False;UI-Sprite Effect Layer;0;;7;789bf62641c5cfe4ab7126850acc22b8;18,204,0,74,0,191,1,225,0,242,0,237,0,249,1,186,0,177,0,182,0,229,0,92,1,98,0,234,0,126,0,129,1,130,0,31,0;18;192;COLOR;1,1,1,1;False;39;COLOR;1,1,1,1;False;37;SAMPLER2D;;False;218;FLOAT2;0,0;False;239;FLOAT2;0,0;False;181;FLOAT2;0,0;False;75;SAMPLER2D;;False;80;FLOAT;1;False;183;FLOAT2;0,0;False;188;SAMPLER2D;;False;33;SAMPLER2D;;False;248;FLOAT2;0,0;False;233;SAMPLER2D;;False;101;SAMPLER2D;;False;57;FLOAT4;0,0,0,0;False;40;FLOAT;0;False;231;FLOAT;1;False;30;FLOAT;1;False;2;COLOR;0;FLOAT2;172
@@ -173,4 +173,4 @@ WireConnection;20;75;24;0
 WireConnection;20;80;25;0
 WireConnection;0;0;20;0
 ASEEND*/
-//CHKSM=487D640C6CFE623A1DE4D20D76473D8C458DEE1B
+//CHKSM=C8ED2A879E4188712CFA77AAE3DF5A04D6845997
