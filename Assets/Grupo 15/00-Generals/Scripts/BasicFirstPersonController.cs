@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class BasicFirstPersonController : MonoBehaviour
 {
+    public Camera freeFlyCamera;
+
     public float moveSpeed = 5f;
     public float mouseSensitivity = 2f;
-    public Camera freeFlyCamera;
+    public float gravity = -9.81f;
+    public bool useGravity = false;
 
     private CharacterController controller;
     private float xRotation = 0f;
+    private float verticalVelocity = 0f;
 
     private bool isIngoringMouse;
     void Start()
@@ -38,13 +42,27 @@ public class BasicFirstPersonController : MonoBehaviour
         Vector3 moveDirection = freeFlyCamera.transform.forward * moveZ + freeFlyCamera.transform.right * moveX;
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
-        // Movimiento vertical
-        if (Input.GetKey(KeyCode.Space))
-            moveDirection += Vector3.up;
-        if (Input.GetKey(KeyCode.LeftShift))
-            moveDirection += Vector3.down;
+        // --- Movimiento vertical (solo si no usa gravedad) ---
+        if (!useGravity)
+        {
+            if (Input.GetKey(KeyCode.Space)) moveDirection += Vector3.up;
+            if (Input.GetKey(KeyCode.LeftShift)) moveDirection += Vector3.down;
+        }
 
-        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+        Vector3 move = moveDirection * moveSpeed;
+
+        // --- Aplicar gravedad si corresponde ---
+        if (useGravity)
+        {
+            if (controller.isGrounded && verticalVelocity < 0)
+                verticalVelocity = -2f;
+            else
+                verticalVelocity += gravity * Time.deltaTime;
+
+            move.y = verticalVelocity;
+        }
+
+        controller.Move(move * Time.deltaTime);
     }
 
     public void SetIgnoreMouse(bool ignore)
